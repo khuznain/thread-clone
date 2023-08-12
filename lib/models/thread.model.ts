@@ -1,22 +1,22 @@
 import mongoose from "mongoose";
 
-const threadScheme = new mongoose.Schema({
-  text: { type: String, required: true },
-  author: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-    },
-  ],
-  community: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Community",
-    },
-  ],
+const threadSchema = new mongoose.Schema({
+  text: {
+    type: String,
+    required: true,
+  },
+  author: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
+  community: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Community",
+  },
   createdAt: {
     type: Date,
-    default: Date.now(),
+    default: Date.now,
   },
   parentId: {
     type: String,
@@ -29,6 +29,6 @@ const threadScheme = new mongoose.Schema({
   ],
 });
 
-const Thread = mongoose.models.Thread || mongoose.model("Thread", threadScheme);
+const Thread = mongoose.models.Thread || mongoose.model("Thread", threadSchema);
 
 export default Thread;
