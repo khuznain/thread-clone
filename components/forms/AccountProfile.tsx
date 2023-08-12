@@ -164,6 +164,7 @@ function AccountProfile({ user, btnTile }: Props) {
                   {...field}
                 />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -182,6 +183,7 @@ function AccountProfile({ user, btnTile }: Props) {
                   {...field}
                 />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -200,6 +202,7 @@ function AccountProfile({ user, btnTile }: Props) {
                   {...field}
                 />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
