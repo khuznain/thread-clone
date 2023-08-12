@@ -4,8 +4,10 @@ import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter, usePathname } from "next/navigation";
-import { Form } from "@/components/ui/form";
+import { ThreadValidation } from "@/lib/validations/thread";
+import { createThread } from "@/lib/actions/thread.actions";
 import { Button } from "@/components/ui/button";
+import { Form } from "@/components/ui/form";
 import { Textarea } from "../ui/textarea";
 import {
   FormControl,
@@ -14,8 +16,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { ThreadValidation } from "@/lib/validations/thread";
-import { createThread } from "@/lib/actions/thread.actions";
 
 //
 
